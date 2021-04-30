@@ -122,3 +122,8 @@ To make mount permanent even after VSI reboot, enter below entry in /etc/fstab d
 **my-bucket-4566 /mycosbucket fuse.s3fs _netdev,allow_other,use_path_request_style,url=https://s3.direct.dal.us.cloud-object-storage.appdomain.cloud 0 0**
 
 ![keymanagement with openshift-1](images/fstab.jpg) 
+
+Reboot the machine to verify persistence of the mounted bucket. Finally the architecture would look like as below.
+
+![keymanagement with openshift-1](images/Arch_ver1.jpg) 
+
