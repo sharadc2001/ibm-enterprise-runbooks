@@ -63,5 +63,9 @@ The COS bucket is already set up in US region as multi-region and to share bucke
 ## Step5
 ![keymanagement with openshift-1](images/VPE5.jpg)
 
+This will create VPE for our DR site pointing to COS as shown below:
+![keymanagement with openshift-1](images/VPE6.jpg)
 
+Similar VPE is created for DC Site. As you can see in below screen shot this VPE is linked to two subnets in primary VPC so that bucket can be shared across Instances in these two subnets.
+![keymanagement with openshift-1](images/VPE7.jpg)
 
