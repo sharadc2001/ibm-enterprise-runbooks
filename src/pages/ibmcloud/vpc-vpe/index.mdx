@@ -69,3 +69,14 @@ This will create VPE for our DR site pointing to COS as shown below:
 Similar VPE is created for DC Site. As you can see in below screen shot this VPE is linked to two subnets in primary VPC so that bucket can be shared across Instances in these two subnets.
 ![keymanagement with openshift-1](images/VPE7.jpg)
 
+VPE uses direct end-points as shown in the above screen shot. This service endpoint can be verified from the bucket Instance. Lets browse through the COS bucket Instance that I have created and understand on how to get the service end-point of the bucket to be used with VPE.
+
+![keymanagement with openshift-1](images/COS_0.jpg)
+
+Since I have created Cross region COS, I will select the region where my bucket is located which is US in current scenario.
+![keymanagement with openshift-1](images/COS_1.jpg)
+
+
+
+
+
