@@ -113,3 +113,12 @@ After the above steps run the command to mount the bucket on POSIX directory.
 and browse the mounted directory to verify its content:
 
 ![keymanagement with openshift-1](images/command.jpg) 
+
+Repeat the above and below steps for other VSI’s in consideration.
+
+## Mounting Bucket permanently 
+To make mount permanent even after VSI reboot, enter below entry in /etc/fstab directory.
+
+**my-bucket-4566 /mycosbucket fuse.s3fs _netdev,allow_other,use_path_request_style,url=https://s3.direct.dal.us.cloud-object-storage.appdomain.cloud 0 0**
+
+![keymanagement with openshift-1](images/fstab.jpg) 
