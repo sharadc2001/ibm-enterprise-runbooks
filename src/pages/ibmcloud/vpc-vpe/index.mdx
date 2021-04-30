@@ -30,4 +30,23 @@ In this use case I will be sharing the data across availability zones in VPC and
 ## DR Implementation Architecture in IBM Cloud Console
 ![keymanagement with openshift-1](images/VPC_DR_Layout.jpg)
 
+## Adding VPE Gateway 
 
+IBM Cloud® Virtual Private Endpoint (VPE) for IBM Cloud™ Virtual Private Cloud provides connection points to IBM services on the IBM private network from your VPC network. VPE has multiple benefits like:
+
+    Public connectivity is not required and has no public data egress charges.
+    Reaches IBM Cloud assets through a private service provider.
+    A VPE lives in your network address space, extending your private and multicloud into the IBM Cloud.
+    You can apply security through Network Access Control Lists (NACLs).
+    The endpoint IP deploys in a customer-defined, virtual network.
+    Includes platform integration to VPC – Identity and Access Management (IAM), network ACLs, and tagging.
+    Access to new endpoints is achieved through the UI, CLI, and API.
+    You can map a new endpoint to an existing service, as well as map to a shared endpoint.
+    Integrates with DNS Services.
+
+ 
+
+The COS bucket is already set up in US region as multi-region and to share bucket across compute instances in DC and DR. I will not cover the details of configuring COS in this article. To mount these buckets in compute instances across regions over the private network, we have to setup VPE. For this one would need to be aware of end-point URL of COS bucket.
+
+## Step1
+![keymanagement with openshift-1](images/VPE_gateway.jpg)
